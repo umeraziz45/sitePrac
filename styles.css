@@ -1,0 +1,90 @@
+/* General */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* Typography */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #404040;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+.button,
+.header--nav {
+  font-size: 14px;
+}
+
+h1,
+h2,
+.bold-text {
+  font-weight: 700;
+}
+
+.accent-colour {
+  color: #ffe600;
+}
+
+
+/* Hero Area */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) minmax(0, 500px) minmax(1em, 1fr);
+  background-image: url(./assets/hero-bg.jpg);
+  color: #fff;
+}
+
+.hero>* {
+  grid-column: 2/-2;
+}
+
+.hero--title {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 1em 0;
+}
+
+.button {
+  padding: 0.5em 1em;
+  font-weight: 700;
+  margin: 1em 0;
+  border: none;
+}
+
+.primary-button {
+  background: #f18119;
+  color: #000;
+  justify-self: start;
+}
