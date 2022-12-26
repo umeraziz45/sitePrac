@@ -23,6 +23,12 @@ img, picture, svg, video {
   max-width: 100%;
 }
 
+.main-grid {
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) minmax(0, 500px) minmax(1em, 1fr);
+  grid-column-gap: 2em;
+}
+
 
 /* Typography */
 
@@ -56,13 +62,18 @@ h2,
   color: #ffe600;
 }
 
+.main-title {
+  font-size: 1.125rem;
+  color: #000;
+  margin-top: 1.25em;
+}
+
 
 /* Hero Area */
 
 .hero {
-  display: grid;
-  grid-template-columns: minmax(1em, 1fr) minmax(0, 500px) minmax(1em, 1fr);
   background-image: url(./assets/hero-bg.jpg);
+  /* background-position: bottom; */
   color: #fff;
 }
 
@@ -87,4 +98,104 @@ h2,
   background: #f18119;
   color: #000;
   justify-self: start;
+}
+
+/* main section */
+
+.main-info {
+  padding: 4em 0;
+  text-align: center;
+}
+
+.col {
+  grid-column: 2/-2;
+}
+
+/* Footer */
+
+.footer-content {
+  background: #ebebeb;
+  text-align: center;
+  padding: 3em 0;
+  grid-template-areas: 
+    ". social ."
+    ". main .";
+}
+
+.footer-main,
+.footer-links {
+  grid-column: 2/-2;
+}
+
+.footer-main {
+  opacity: 0.4;
+  grid-area: main;
+}
+
+.footer-text {
+  padding: 1em 0;
+}
+
+.logo-img {
+  display: unset;
+}
+
+.footer-links {
+  grid-area: social;
+  display: flex;
+  order: -1;
+  list-style: none;
+  justify-content: center;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.75rem;
+  margin: 0.5em;
+}
+
+.footer-link:hover {
+  text-decoration:underline;
+  color: #777;
+}
+
+/* Media Query */
+
+@media (min-width: 600px){
+  .main-grid {
+    grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(180px, 320px)) minmax(1em, 1fr);
+  }
+
+  .hero {
+    padding: 6em 0;
+    background-size: cover;
+    background-position: 20% 10%;
+    background-repeat: no-repeat;
+  }
+
+  .hero > * {
+    grid-column: 2 / span 2;
+  }
+
+  .col {
+    grid-column: span 1;
+  }
+
+  .col:first-child {
+    grid-column: 2 ;
+  }
+
+  .footer-content {
+    grid-template-areas: 
+    " . main main social .";
+  }
+
+  .footer-main {
+    text-align: left;
+  }
+
+  .footer-links {
+    justify-content: flex-end;
+  }
 }
