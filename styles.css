@@ -68,6 +68,92 @@ h2,
   margin-top: 1.25em;
 }
 
+/* Navigation */
+
+.header {
+  background: #000;
+}
+
+.header--content {
+  display: flex;
+  grid-column: 2 / -2;
+}
+
+.logo-link {
+  background: #ffe600;
+  padding: 2em .5em;
+  display: grid;
+}
+
+.logo-img {
+  display: unset;
+}
+
+.header--nav {
+  position: fixed;
+  background: #000;
+  width: 100%;
+  bottom: 0;
+  left: 100%;
+  top: 0;
+  right: 0;
+  transition: 250ms;
+}
+
+.header--nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.header--nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.header--nav-link:hover,
+.header--nav-link:focus {
+  color: #f18119;
+}
+
+.closeNav {
+  background: 0;
+  border: 0;
+  color: #ffe600;
+  font-weight: 700;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 0.5em;
+  position: absolute;
+}
+
+.openNav {
+  border: 0;
+  background: 0;
+  color: #fff;
+  margin-left: auto ;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.openNav:hover,
+.openNav:focus {
+  color: #f18119;
+}
+
+.navOpen {
+  transform: translateX(-100%);
+}
+
+
 
 /* Hero Area */
 

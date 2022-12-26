@@ -14,17 +14,22 @@
 </head>
 <body>
 
-  <header class="header--content main-grid">
+  <header class="header main-grid">
 
-    <a href="#" class="logo-link"><img src="./assets/logo.png" alt="logo of company" class="logo-img" /></a>
+    <div class="header--content">
 
-    <nav class="header--nav">
-      <ul class="header--nav-links">
-        <li><a class="header--nav-link href="#">Home</a></li>
-        <li><a class="header--nav-link href="#">About Us</a></li>
-        <li><a class="header--nav-link href="#">Contact</a></li>
-      </ul>
-    </nav>
+      <a href="#" class="logo-link"><img src="./assets/logo.png" alt="logo of company" class="logo-img" /></a>
+      <button aria-label="open navigation" class="openNav">&#9776;</button>
+      <nav class="header--nav  ">
+        <button aria-label="close navigation" class="closeNav">&times;</button>
+        <ul class="header--nav-links">
+          <li><a class="header--nav-link href="#">Home</a></li>
+          <li><a class="header--nav-link href="#">About Us</a></li>
+          <li><a class="header--nav-link href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
 
   </header>
   
@@ -91,6 +96,6 @@
   </main>
 
 
-  
+  <script src="./script.js"></script>
 </body>
 </html>
